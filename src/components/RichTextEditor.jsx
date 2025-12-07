@@ -17,7 +17,9 @@ function RichTextEditor() {
 
   /* ------------------------ 1. Setup Socket.io Connection ------------------------ */
   useEffect(() => {
-    const socketInstance = io("http://localhost:3001");
+    const socketInstance = io(
+      "https://google-docs-clone-backend-wtgq.onrender.com"
+    );
     setSocket(socketInstance);
 
     return () => socketInstance.disconnect();
